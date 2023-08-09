@@ -1,0 +1,356 @@
+@import "./style";
+
+#main {
+  #header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: #fff;
+
+    .logo {
+      margin-left: 50px;
+      @include mobile {
+        margin-left: 10px;
+      }
+      img {
+        width: 8rem;
+        cursor: pointer;
+      }
+    }
+    .menu {
+      .list {
+        display: flex;
+        column-gap: 5rem;
+        .links {
+          color: #000;
+
+          &:hover {
+            padding-bottom: 5px;
+            border-bottom: 1px solid #000;
+          }
+        }
+        @include mobile {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    .burger-menu {
+      display: none;
+      @include mobile {
+        display: block;
+        width: 30px;
+        height: 25px;
+      }
+      @include tablet {
+        display: block;
+        width: 30px;
+        height: 25px;
+      }
+    }
+  }
+  .nav {
+    background-color: #000;
+    padding: 20px 0;
+    h3 {
+      text-align: center;
+      color: #fff;
+      @include mobile {
+        font-size: 15px;
+      }
+    }
+    .span {
+      font-weight: 700;
+      margin-left: 1.4rem;
+      border-bottom: 1px solid #fff;
+      @include mobile {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+  .closet {
+    background-color: #451314;
+    display: flex;
+    justify-content: space-evenly;
+    @include mobile {
+      flex-wrap: wrap;
+      padding: 10px 0;
+      flex-direction: column-reverse;
+    }
+    @include tablet {
+      padding: 10px 0;
+      padding-left: 200px;
+      flex-direction: column-reverse;
+    }
+    &-left {
+      width: 390px;
+      @include tablet {
+        width: 80%;
+      }
+      .img {
+        width: 100%;
+      }
+    }
+    &-right {
+      color: #fff;
+      margin: auto 0;
+      line-height: 3.5rem;
+      @include mobile {
+        padding-left: 10px;
+      }
+      @include tablet {
+        padding-left: 10px;
+      }
+      h3 {
+        font-size: 2.5rem;
+        @include tablet {
+          padding-top: 2rem;
+
+          font-size: 1.9rem;
+        }
+        @include mobile {
+          padding-top: 2rem;
+          font-size: 1.9rem;
+        }
+      }
+      p {
+        font-weight: 600;
+      }
+      button {
+        padding: 12px 25px;
+        border: none;
+        color: rgb(95, 92, 92);
+        font-size: 18px;
+        @include mobile {
+          margin-bottom: 2rem;
+        }
+        &:hover {
+          transition: 1s;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .bacground-img {
+    img {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: -1;
+    }
+  }
+  .collection {
+    background-color: #fff;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    @include mobile {
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+
+      padding: 10px 0 10px 200px;
+    }
+    &-left {
+      margin: auto 0;
+      line-height: 3.5rem;
+      @include mobile {
+        padding-left: 10px;
+      }
+
+      h3 {
+        font-weight: normal;
+        font-size: 2.5rem;
+        @include mobile {
+          padding-top: 2rem;
+          font-size: 1.9rem;
+        }
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+    &-right {
+      display: flex;
+      column-gap: 2rem;
+      @include mobile {
+        flex-wrap: wrap;
+        row-gap: 1.5rem;
+      }
+      @include tablet {
+        flex-wrap: wrap;
+        width: 70%;
+        row-gap: 1.5rem;
+      }
+      img {
+        width: 240px;
+        @include mobile {
+          width: 100%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .inspired {
+    p {
+      padding: 10rem 0;
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+  .accessories {
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 5rem 15px;
+    column-gap: 2rem;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+    .accessories-card {
+      line-height: 3rem;
+
+      img {
+        width: 600px;
+        @include mobile {
+          width: 350px;
+        }
+      }
+      h3 {
+        font-weight: normal;
+        font-size: 2rem;
+      }
+    }
+  }
+  .form {
+    width: 100%;
+    height: 500px;
+    background-image: url("../assets/images/img-m57zVv6WWeTX3eepson.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 40px;
+    line-height: 4rem;
+    @include tablet {
+      padding: 4rem 10rem;
+    }
+
+    p {
+      font-size: 2rem;
+      @include mobile {
+        font-size: 1rem;
+      }
+      @include tablet {
+        font-size: 0.8rem;
+      }
+    }
+    h3 {
+      width: 45rem;
+      font-size: 3.5rem;
+      @include mobile {
+        width: 350px;
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+      @include tablet {
+        width: 400px;
+        font-size: 1.8rem;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      .email-input {
+        width: 30%;
+        font-size: 1rem;
+        padding: 15px 10px;
+        outline: none;
+        border: none;
+        @include mobile {
+          width: 300px;
+        }
+        @include tablet {
+          width: 300px;
+        }
+      }
+      .w-btn {
+        width: 100px;
+      }
+    }
+  }
+  .button {
+    padding: 15px 25px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    @include mobile {
+      margin-bottom: 2rem;
+    }
+    &:hover {
+      transition: 1s;
+      opacity: 0.8;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+#footer {
+  background-color: #fff;
+  padding: 50px;
+  padding-bottom: 100px;
+  display: flex;
+  column-gap: 45rem;
+  @include mobile {
+    flex-wrap: wrap;
+  }
+  @include tablet {
+    padding-left: 160px;
+    flex-wrap: wrap;
+  }
+  .footer-left {
+    .list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+  }
+  .footer-right {
+    @include mobile {
+      margin-top: 3 rem;
+    }
+    line-height: 4rem;
+    p {
+      font-size: 2rem;
+      @include tablet {
+        margin-top: 2rem;
+      }
+    }
+    .list {
+      margin-top: 10px;
+      display: flex;
+      column-gap: 2rem;
+    }
+  }
+  .f-links {
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+}
