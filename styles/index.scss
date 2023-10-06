@@ -1,59 +1,62 @@
 @import "./style";
 
-#main {
-  #header {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px;
-    background-color: #fff;
+#header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #fff;
 
-    .logo {
-      margin-left: 50px;
-      @include mobile {
-        margin-left: 10px;
-      }
-      img {
-        width: 8rem;
-        cursor: pointer;
-      }
+  .logo {
+    margin-left: 50px;
+    @include mobile {
+      margin-left: 10px !important;
     }
-    .menu {
-      .list {
-        display: flex;
-        column-gap: 5rem;
-        .links {
-          color: #000;
+    img {
+      width: 8rem;
+      cursor: pointer;
+    }
+  }
+  .menu {
+    .list {
+      display: flex;
+      column-gap: 5rem;
+      .links {
+        color: #000;
 
-          &:hover {
-            padding-bottom: 5px;
-            border-bottom: 1px solid #000;
-          }
-        }
-        @include mobile {
-          display: none;
-        }
-        @include tablet {
-          display: none;
+        &:hover {
+          padding-bottom: 5px;
+          border-bottom: 1px solid #000;
         }
       }
-    }
-    .burger-menu {
-      display: none;
       @include mobile {
-        display: block;
-        width: 30px;
-        height: 25px;
+        display: none !important;
       }
       @include tablet {
-        display: block;
-        width: 30px;
-        height: 25px;
+        display: none;
       }
     }
   }
+  .burger-menu {
+    display: none;
+    @include mobile {
+      display: block !important;
+      width: 30px !important;
+      height: 25px !important;
+    }
+    @include tablet {
+      display: block;
+      width: 30px;
+      height: 25px;
+    }
+  }
+}
+
+#main {
   .nav {
     background-color: #000;
     padding: 20px 0;
@@ -61,15 +64,16 @@
       text-align: center;
       color: #fff;
       @include mobile {
-        font-size: 15px;
+        font-size: 15px !important;
       }
     }
     .span {
       font-weight: 700;
       margin-left: 1.4rem;
       border-bottom: 1px solid #fff;
+      cursor: pointer;
       @include mobile {
-        margin-left: 0.8rem;
+        margin-left: 0.8rem !important;
       }
     }
   }
@@ -78,13 +82,13 @@
     display: flex;
     justify-content: space-evenly;
     @include mobile {
-      flex-wrap: wrap;
-      padding: 10px 0;
-      flex-direction: column-reverse;
+      flex-wrap: wrap !important;
+      padding-left: 20% !important;
+      flex-direction: column-reverse !important;
     }
     @include tablet {
       padding: 10px 0;
-      padding-left: 200px;
+      padding-left: 22%;
       flex-direction: column-reverse;
     }
     &-left {
@@ -101,7 +105,7 @@
       margin: auto 0;
       line-height: 3.5rem;
       @include mobile {
-        padding-left: 10px;
+        padding-left: 10px !important;
       }
       @include tablet {
         padding-left: 10px;
@@ -114,8 +118,8 @@
           font-size: 1.9rem;
         }
         @include mobile {
-          padding-top: 2rem;
-          font-size: 1.9rem;
+          padding-top: 2rem !important;
+          font-size: 1.9rem !important;
         }
       }
       p {
@@ -127,7 +131,7 @@
         color: rgb(95, 92, 92);
         font-size: 18px;
         @include mobile {
-          margin-bottom: 2rem;
+          margin-bottom: 2rem !important;
         }
         &:hover {
           transition: 1s;
@@ -150,27 +154,26 @@
     padding: 50px;
     justify-content: space-between;
     @include mobile {
-      flex-wrap: wrap;
-      padding: 10px 0;
+      flex-wrap: wrap !important;
+      padding-left: 20% !important;
     }
     @include tablet {
       flex-wrap: wrap;
-
       padding: 10px 0 10px 200px;
     }
     &-left {
       margin: auto 0;
       line-height: 3.5rem;
       @include mobile {
-        padding-left: 10px;
+        padding-left: 10px !important;
       }
 
       h3 {
         font-weight: normal;
         font-size: 2.5rem;
         @include mobile {
-          padding-top: 2rem;
-          font-size: 1.9rem;
+          padding-top: 2rem !important;
+          font-size: 1.9rem !important;
         }
       }
       p {
@@ -181,8 +184,8 @@
       display: flex;
       column-gap: 2rem;
       @include mobile {
-        flex-wrap: wrap;
-        row-gap: 1.5rem;
+        flex-wrap: wrap !important;
+        row-gap: 1.5rem !important;
       }
       @include tablet {
         flex-wrap: wrap;
@@ -192,7 +195,7 @@
       img {
         width: 240px;
         @include mobile {
-          width: 100%;
+          width: 100% !important;
         }
         @include tablet {
           width: 100%;
@@ -215,23 +218,32 @@
     padding: 5rem 15px;
     column-gap: 2rem;
     @include mobile {
-      flex-wrap: wrap;
+      flex-wrap: wrap !important;
     }
     @include tablet {
       flex-wrap: wrap;
     }
     .accessories-card {
       line-height: 3rem;
+      @include tablet {
+        width: 351px;
+      }
 
       img {
         width: 600px;
         @include mobile {
+          width: 350px !important;
+        }
+        @include tablet {
           width: 350px;
         }
       }
       h3 {
         font-weight: normal;
         font-size: 2rem;
+        @include tablet {
+          font-size: 1.5rem;
+        }
       }
     }
   }
@@ -244,14 +256,19 @@
     color: #fff;
     padding: 40px;
     line-height: 4rem;
+    @include mobile {
+      padding-left: 1.5rem !important;
+      padding-top: 1.5rem !important;
+    }
+
     @include tablet {
-      padding: 4rem 10rem;
+      padding: 4rem 8rem;
     }
 
     p {
       font-size: 2rem;
       @include mobile {
-        font-size: 1rem;
+        font-size: 1rem !important;
       }
       @include tablet {
         font-size: 0.8rem;
@@ -261,12 +278,12 @@
       width: 45rem;
       font-size: 3.5rem;
       @include mobile {
-        width: 350px;
-        font-size: 2rem;
-        line-height: 3rem;
+        width: 320px !important;
+        font-size: 2rem !important;
+        line-height: 3rem !important;
       }
       @include tablet {
-        width: 400px;
+        width: 380px;
         font-size: 1.8rem;
       }
     }
@@ -281,7 +298,7 @@
         outline: none;
         border: none;
         @include mobile {
-          width: 300px;
+          width: 300px !important;
         }
         @include tablet {
           width: 300px;
@@ -300,7 +317,7 @@
     font-size: 18px;
     cursor: pointer;
     @include mobile {
-      margin-bottom: 2rem;
+      margin-bottom: 2rem !important;
     }
     &:hover {
       transition: 1s;
@@ -319,7 +336,7 @@
   display: flex;
   column-gap: 45rem;
   @include mobile {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
   @include tablet {
     padding-left: 160px;
@@ -334,7 +351,7 @@
   }
   .footer-right {
     @include mobile {
-      margin-top: 3 rem;
+      margin-top: 3 rem !important;
     }
     line-height: 4rem;
     p {

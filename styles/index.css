@@ -7,7 +7,9 @@
   list-style-type: none;
 }
 
-#main #header {
+#header {
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 80px;
   display: flex;
@@ -16,57 +18,58 @@
   padding: 30px;
   background-color: #fff;
 }
-#main #header .logo {
+#header .logo {
   margin-left: 50px;
 }
 @media (max-width: 575px) {
-  #main #header .logo {
-    margin-left: 10px;
+  #header .logo {
+    margin-left: 10px !important;
   }
 }
-#main #header .logo img {
+#header .logo img {
   width: 8rem;
   cursor: pointer;
 }
-#main #header .menu .list {
+#header .menu .list {
   display: flex;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
 }
-#main #header .menu .list .links {
+#header .menu .list .links {
   color: #000;
 }
-#main #header .menu .list .links:hover {
+#header .menu .list .links:hover {
   padding-bottom: 5px;
   border-bottom: 1px solid #000;
 }
 @media (max-width: 575px) {
-  #main #header .menu .list {
-    display: none;
+  #header .menu .list {
+    display: none !important;
   }
 }
 @media (max-width: 768px) {
-  #main #header .menu .list {
+  #header .menu .list {
     display: none;
   }
 }
-#main #header .burger-menu {
+#header .burger-menu {
   display: none;
 }
 @media (max-width: 575px) {
-  #main #header .burger-menu {
-    display: block;
-    width: 30px;
-    height: 25px;
+  #header .burger-menu {
+    display: block !important;
+    width: 30px !important;
+    height: 25px !important;
   }
 }
 @media (max-width: 768px) {
-  #main #header .burger-menu {
+  #header .burger-menu {
     display: block;
     width: 30px;
     height: 25px;
   }
 }
+
 #main .nav {
   background-color: #000;
   padding: 20px 0;
@@ -77,17 +80,18 @@
 }
 @media (max-width: 575px) {
   #main .nav h3 {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 }
 #main .nav .span {
   font-weight: 700;
   margin-left: 1.4rem;
   border-bottom: 1px solid #fff;
+  cursor: pointer;
 }
 @media (max-width: 575px) {
   #main .nav .span {
-    margin-left: 0.8rem;
+    margin-left: 0.8rem !important;
   }
 }
 #main .closet {
@@ -97,15 +101,15 @@
 }
 @media (max-width: 575px) {
   #main .closet {
-    flex-wrap: wrap;
-    padding: 10px 0;
-    flex-direction: column-reverse;
+    flex-wrap: wrap !important;
+    padding-left: 20% !important;
+    flex-direction: column-reverse !important;
   }
 }
 @media (max-width: 768px) {
   #main .closet {
     padding: 10px 0;
-    padding-left: 200px;
+    padding-left: 22%;
     flex-direction: column-reverse;
   }
 }
@@ -127,7 +131,7 @@
 }
 @media (max-width: 575px) {
   #main .closet-right {
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
 }
 @media (max-width: 768px) {
@@ -146,8 +150,8 @@
 }
 @media (max-width: 575px) {
   #main .closet-right h3 {
-    padding-top: 2rem;
-    font-size: 1.9rem;
+    padding-top: 2rem !important;
+    font-size: 1.9rem !important;
   }
 }
 #main .closet-right p {
@@ -161,7 +165,7 @@
 }
 @media (max-width: 575px) {
   #main .closet-right button {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
   }
 }
 #main .closet-right button:hover {
@@ -182,8 +186,8 @@
 }
 @media (max-width: 575px) {
   #main .collection {
-    flex-wrap: wrap;
-    padding: 10px 0;
+    flex-wrap: wrap !important;
+    padding-left: 20% !important;
   }
 }
 @media (max-width: 768px) {
@@ -198,7 +202,7 @@
 }
 @media (max-width: 575px) {
   #main .collection-left {
-    padding-left: 10px;
+    padding-left: 10px !important;
   }
 }
 #main .collection-left h3 {
@@ -207,8 +211,8 @@
 }
 @media (max-width: 575px) {
   #main .collection-left h3 {
-    padding-top: 2rem;
-    font-size: 1.9rem;
+    padding-top: 2rem !important;
+    font-size: 1.9rem !important;
   }
 }
 #main .collection-left p {
@@ -221,8 +225,8 @@
 }
 @media (max-width: 575px) {
   #main .collection-right {
-    flex-wrap: wrap;
-    row-gap: 1.5rem;
+    flex-wrap: wrap !important;
+    row-gap: 1.5rem !important;
   }
 }
 @media (max-width: 768px) {
@@ -237,7 +241,7 @@
 }
 @media (max-width: 575px) {
   #main .collection-right img {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media (max-width: 768px) {
@@ -261,7 +265,7 @@
 }
 @media (max-width: 575px) {
   #main .accessories {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
 }
 @media (max-width: 768px) {
@@ -272,10 +276,20 @@
 #main .accessories .accessories-card {
   line-height: 3rem;
 }
+@media (max-width: 768px) {
+  #main .accessories .accessories-card {
+    width: 351px;
+  }
+}
 #main .accessories .accessories-card img {
   width: 600px;
 }
 @media (max-width: 575px) {
+  #main .accessories .accessories-card img {
+    width: 350px !important;
+  }
+}
+@media (max-width: 768px) {
   #main .accessories .accessories-card img {
     width: 350px;
   }
@@ -283,6 +297,11 @@
 #main .accessories .accessories-card h3 {
   font-weight: normal;
   font-size: 2rem;
+}
+@media (max-width: 768px) {
+  #main .accessories .accessories-card h3 {
+    font-size: 1.5rem;
+  }
 }
 #main .form {
   width: 100%;
@@ -294,9 +313,15 @@
   padding: 40px;
   line-height: 4rem;
 }
+@media (max-width: 575px) {
+  #main .form {
+    padding-left: 1.5rem !important;
+    padding-top: 1.5rem !important;
+  }
+}
 @media (max-width: 768px) {
   #main .form {
-    padding: 4rem 10rem;
+    padding: 4rem 8rem;
   }
 }
 #main .form p {
@@ -304,7 +329,7 @@
 }
 @media (max-width: 575px) {
   #main .form p {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
 @media (max-width: 768px) {
@@ -318,14 +343,14 @@
 }
 @media (max-width: 575px) {
   #main .form h3 {
-    width: 350px;
-    font-size: 2rem;
-    line-height: 3rem;
+    width: 320px !important;
+    font-size: 2rem !important;
+    line-height: 3rem !important;
   }
 }
 @media (max-width: 768px) {
   #main .form h3 {
-    width: 400px;
+    width: 380px;
     font-size: 1.8rem;
   }
 }
@@ -343,7 +368,7 @@
 }
 @media (max-width: 575px) {
   #main .form form .email-input {
-    width: 300px;
+    width: 300px !important;
   }
 }
 @media (max-width: 768px) {
@@ -364,7 +389,7 @@
 }
 @media (max-width: 575px) {
   #main .button {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem !important;
   }
 }
 #main .button:hover {
@@ -387,7 +412,7 @@
 }
 @media (max-width: 575px) {
   #footer {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
   }
 }
 @media (max-width: 768px) {
@@ -406,7 +431,7 @@
 }
 @media (max-width: 575px) {
   #footer .footer-right {
-    margin-top: 3 rem;
+    margin-top: 3 rem !important;
   }
 }
 #footer .footer-right p {
